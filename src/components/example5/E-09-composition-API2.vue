@@ -1,19 +1,25 @@
-<script>
-export default {
-  name: 'E09CompositionApi'
+<template>
+  <div>
+    <h2>{{ title }}</h2>
+    <p>Full Name: {{ fullName }}</p>
+    <input v-model="firstName" placeholder="First Name" />
+    <input v-model="lastName" placeholder="Last Name" />
+    <button @click="greet">Greet</button>
+    <p>Greeting Count: {{ greetCount }}</p>
+    <p>{{ message }}</p>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, computed, watch, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue';
+
+interface Props {
+  title?: string;
 }
-</script>
-
-
-<script setup>
-import { ref, computed, watch, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted, defineProps } from 'vue';
 
 // props 정의
-const props = defineProps({
-  title: {
-    type: String,
-    default: 'User Information'
-  }
+const props = withDefaults(defineProps<Props>(), {
+  title: 'User Information'
 });
 
 // 반응형 상태 정의
@@ -51,15 +57,3 @@ onUpdated(() => console.log('updated hook'));
 onBeforeUnmount(() => console.log('beforeUnmount hook'));
 onUnmounted(() => console.log('unmounted hook'));
 </script>
-
-<template>
-  <div>
-    <h2>{{ title }}</h2>
-    <p>Full Name: {{ fullName }}</p>
-    <input v-model="firstName" placeholder="First Name" />
-    <input v-model="lastName" placeholder="Last Name" />
-    <button @click="greet">Greet</button>
-    <p>Greeting Count: {{ greetCount }}</p>
-    <p>{{ message }}</p>
-  </div>
-</template>

@@ -11,13 +11,11 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { inject } from 'vue';
 import ChildComponent2 from "@/components/example4/ChildComponent2.vue";
 
-export default {
-  components: {ChildComponent2},
-  inject: ['sharedMessage']
-};
+const sharedMessage = inject<string>('sharedMessage');
 </script>
 
 
