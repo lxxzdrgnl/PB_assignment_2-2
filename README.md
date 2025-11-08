@@ -87,31 +87,34 @@ const greet = () => {
 
 ## 리팩토링 후 스크린샷
 
-### E-01-instance.vue
+### Example 1 - E-01-instance.vue
 ![Example 1](./img/1.png)
 
-### E-02-reactive.vue
+### Example 1 - E-02-reactive.vue
 ![Example 2](./img/2.png)
 
-### E-03-binding.vue
+### Example 1 - E-03-binding.vue
 ![Example 3](./img/3.png)
 
-### E-04-directives.vue
+### Example 2 - E-04-directives.vue
 ![Example 4](./img/4.png)
 
-### ParentComponent.vue
+### Example 3 - ParentComponent.vue
+![Example 5](./img/4-1.png)
+
+### Example 4 - ParentComponent.vue
 ![Example 5](./img/5.png)
 
-### E-09-composition-API2.vue
+### Example 5 - E-09-composition-API2.vue
 ![Example 6](./img/6.png)
 
-### E-10-ref.vue
+### Example 6 - E-10-ref.vue
 ![Example 7](./img/7.png)
 
-### E-11-reactive.vue
+### Example 6 - E-11-reactive.vue
 ![Example 8](./img/8.png)
 
-### E-12-ref-component.vue
+### Example 6 - E-12-ref-component.vue
 ![Example 9](./img/9.png)
 
 ## Project setup
